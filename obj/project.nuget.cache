@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lmICbQcqRjSkTzISHvSjLNuYqgJtxBxanAzKZ9UQvwrLiC8s0XvUXohe0XIS7WAM/X0VvByl/RefXeCC6hFSJQ==",
+  "success": true,
+  "projectFilePath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj",
+  "expectedPackageFiles": [
+    "/home/roly/.nuget/packages/microsoft.aspnetcore.spaproxy/6.0.7/microsoft.aspnetcore.spaproxy.6.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}

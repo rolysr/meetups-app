@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Microsoft.AspNetCore.SpaProxy/6.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/Microsoft.AspNetCore.SpaProxy.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.AspNetCore.SpaProxy/6.0.7": {
+      "sha512": "hxtk0Ya7TF6N9fxTkSontfdQgBz1N0wjOBf0gqPahWYFiZI7GCu0bsK2rchFdZJ4yYACzqBLgSODX1pTWzQYUg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.spaproxy/6.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.AspNetCore.SpaProxy.targets",
+        "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll",
+        "microsoft.aspnetcore.spaproxy.6.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Microsoft.AspNetCore.SpaProxy >= 6.0.7"
+    ]
+  },
+  "packageFolders": {
+    "/home/roly/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj",
+      "projectName": "MeetupsApp",
+      "projectPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj",
+      "packagesPath": "/home/roly/.nuget/packages/",
+      "outputPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/roly/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.SpaProxy": {
+            "target": "Package",
+            "version": "[6.0.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.302/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
