@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj": {}
+    "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp.csproj": {}
   },
   "projects": {
-    "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj": {
+    "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj",
+        "projectUniqueName": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp.csproj",
         "projectName": "MeetupsApp",
-        "projectPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/MeetupsApp.csproj",
+        "projectPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp.csproj",
         "packagesPath": "/home/roly/.nuget/packages/",
-        "outputPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/MeetupsApp/obj/",
+        "outputPath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/roly/.nuget/NuGet/NuGet.Config"
@@ -38,9 +38,35 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
             "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
               "version": "[6.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[6.0.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
