@@ -1,7 +1,7 @@
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-using MeetupsApp.Api.Models;
 using MeetupsApp.Api.Repositories;
+using MeetupsApp.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,16 +9,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers(options => { options.SuppressAsyncSuffixInActionNames = false; });
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MeetupsApp.Api API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "MeetupsApp API", Version = "v1" });
 });
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
 builder.Services.AddDbContext<MeetupsAppContext>(options => options.UseSqlite("Data Source=meetups.db"));
 builder.Services.AddSingleton<IMeetupsRepository, SqliteDbMeetupsRepository>();
 
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddCors();
+
 var app = builder.Build();
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,6 +45,7 @@ if(app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseEndpoints(endpoints =>
 {
@@ -51,7 +58,7 @@ app.UseEndpoints(endpoints =>
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+    pattern: "/api/{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");;
 

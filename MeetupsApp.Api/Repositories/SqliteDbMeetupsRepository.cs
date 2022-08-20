@@ -16,8 +16,8 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
     {
         using (var scope = this.serviceProvider.CreateScope())
         {
-            var iMuseumDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
-            return await iMuseumDbContext.Meetups.ToListAsync();
+            var meetupsAppDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
+            return await meetupsAppDbContext.Meetups.ToListAsync();
         }
     }
 
@@ -25,8 +25,8 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
     {
         using (var scope = this.serviceProvider.CreateScope())
         {
-            var iMuseumDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
-            return await iMuseumDbContext.Meetups.FirstOrDefaultAsync(meetup => meetup.MeetupId == id);
+            var meetupsAppDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
+            return await meetupsAppDbContext.Meetups.FirstOrDefaultAsync(meetup => meetup.MeetupId == id);
         }
     }
 
@@ -34,9 +34,9 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
     {
         using (var scope = this.serviceProvider.CreateScope())
         {
-            var iMuseumDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
-            iMuseumDbContext.Meetups.Add(meetup);
-            await iMuseumDbContext.SaveChangesAsync();
+            var meetupsAppDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
+            meetupsAppDbContext.Meetups.Add(meetup);
+            await meetupsAppDbContext.SaveChangesAsync();
         }  
     }
 
@@ -44,15 +44,15 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
     {
         using (var scope = this.serviceProvider.CreateScope())
         {
-            var iMuseumDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
-            var oldMeetup = await iMuseumDbContext.Meetups.FirstOrDefaultAsync(oldMeetup => meetup.MeetupId == oldMeetup.MeetupId);
+            var meetupsAppDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
+            var oldMeetup = await meetupsAppDbContext.Meetups.FirstOrDefaultAsync(oldMeetup => meetup.MeetupId == oldMeetup.MeetupId);
             oldMeetup.Title = meetup.Title;
             oldMeetup.Address = meetup.Address;
             oldMeetup.Description = meetup.Description;
             oldMeetup.Image = meetup.Image;
             oldMeetup.IsFavorite = meetup.IsFavorite;
 
-            await iMuseumDbContext.SaveChangesAsync();
+            await meetupsAppDbContext.SaveChangesAsync();
         } 
     }
 
@@ -60,9 +60,9 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
     {
         using (var scope = this.serviceProvider.CreateScope())
         {
-            var iMuseumDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
-            iMuseumDbContext.Meetups.Remove(await iMuseumDbContext.Meetups.FirstOrDefaultAsync(meetup => meetup.MeetupId == id));
-            await iMuseumDbContext.SaveChangesAsync();
+            var meetupsAppDbContext = scope.ServiceProvider.GetRequiredService<MeetupsAppContext>();
+            meetupsAppDbContext.Meetups.Remove(await meetupsAppDbContext.Meetups.FirstOrDefaultAsync(meetup => meetup.MeetupId == id));
+            await meetupsAppDbContext.SaveChangesAsync();
         }   
     }
 }
