@@ -31,19 +31,6 @@ public class MeetupsController : ControllerBase
         return meetups;
     }
 
-    //GET /meetups/favorites
-    [HttpGet("favorites")]
-    public async Task<IEnumerable<MeetupDto>> GetFavoriteMeetupsAsync()
-    {
-        var meetups = (await repository.GetMeetupsAsync())
-                        .Where(meetup => meetup.IsFavorite)
-                        .Select(meetup => meetup.AsDto());
-        
-        logger.LogInformation($"{DateTime.UtcNow.ToString("hh:mm:ss")}: Retrieved {meetups.Count()} items");
-
-        return meetups;
-    }
-
     //GET /meetups/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<MeetupDto>> GetMeetupAsync(Guid id)

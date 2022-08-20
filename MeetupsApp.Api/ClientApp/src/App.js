@@ -9,7 +9,6 @@ function App() {
   // domain => localhost:3000
   return (
     <Layout>
-
       <Routes>
         <Route path="/" element={<AllMeetupsPage />} />
         <Route path="/new-meetup" element={<NewMeetupPage />} />

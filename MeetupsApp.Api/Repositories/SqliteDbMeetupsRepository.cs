@@ -50,7 +50,6 @@ public class SqliteDbMeetupsRepository : IMeetupsRepository
             oldMeetup.Address = meetup.Address;
             oldMeetup.Description = meetup.Description;
             oldMeetup.Image = meetup.Image;
-            oldMeetup.IsFavorite = meetup.IsFavorite;
 
             await meetupsAppDbContext.SaveChangesAsync();
         } 

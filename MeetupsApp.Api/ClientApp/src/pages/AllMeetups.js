@@ -27,6 +27,7 @@ function AllMeetupsPage() {
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("http://localhost:5078/meetups")
       .then((response) => {
         return response.json();
