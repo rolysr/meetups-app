@@ -11,6 +11,12 @@
 # production
 /build
 
+# migrations
+/Migrations
+
+# db
+*.db
+
 # misc
 .DS_Store
 .env.local

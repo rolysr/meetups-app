@@ -15,6 +15,8 @@ public class MeetupsAppContext : DbContext
         DbPath = System.IO.Path.Join("", "meetups.db");
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder) {} 
+
     // The following configures EF to create a Sqlite database file in the
     // special "local" folder for your platform.
     protected override void OnConfiguring(DbContextOptionsBuilder options)

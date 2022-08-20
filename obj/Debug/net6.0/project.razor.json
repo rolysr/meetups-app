@@ -16296,17 +16296,6 @@
     "CSharpLanguageVersion": 1000
   },
   "RootNamespace": "MeetupsApp",
-  "Documents": [
-    {
-      "FilePath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/Pages/Error.cshtml",
-      "TargetPath": "Pages\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/roly/Desktop/ROLY/ReactJS/meetups-app/Pages/_ViewImports.cshtml",
-      "TargetPath": "Pages\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "Documents": [],
   "SerializationFormat": "0.2"
 }

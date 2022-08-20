@@ -1,4 +1,7 @@
 using Microsoft.OpenApi.Models;
+using MeetupsApp.Models;
+using MeetupsApp.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +13,10 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MeetupsAppContext>(options => options.UseSqlite("Data Source=meetups.db"));
+builder.Services.AddSingleton<IMeetupsRepository, SqliteDbMeetupsRepository>();
 
 var app = builder.Build();
 
