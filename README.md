@@ -1,7 +1,7 @@
 # Meetups App
 
 ## Briefing
-meetups-app is a project for managing meetups with a front-end implemented with ReactJs and a back-end developed with .Net 6 and SQLite
+meetups-app is a project for managing meetups with a front-end implemented with ReactJs and a back-end developed with .Net 6 and SQLite. This project includes a back-end unit testing project
 
 ## Prerequisites
 - [NodeJS v16.14.2](https://nodejs.org/download/release/v16.14.2/) 
