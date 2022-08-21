@@ -1,0 +1,11 @@
+global using Xunit;
+global using System;
+global using Moq;
+global using MeetupsApp.Api.Repositories;
+global using MeetupsApp.Api.Models;
+global using MeetupsApp.Api.Dtos;
+global using MeetupsApp.Api.Controllers;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Threading.Tasks;
+global using FluentAssertions;
