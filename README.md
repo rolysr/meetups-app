@@ -32,7 +32,7 @@ meetups-app is a project for managing meetups with a front-end implemented with 
     ```
   - Run just Frontend service 
     ```
-    cd cd ./MeetupsApp.Api/ClientApp
+    cd ./MeetupsApp.Api/ClientApp
     npm start
     ```
   - Run install dependencies for Frontend Project
